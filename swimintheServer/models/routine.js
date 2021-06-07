@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     stroke: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.TEXT,
       allowNull: false
     },
     distance: {
@@ -27,6 +27,10 @@ module.exports = (sequelize, DataTypes) => {
     time: {
       type: DataTypes.DOUBLE,
       allowNull: false
+    },
+    remark: {
+      type: DataTypes.TEXT,
+      allowNull: true
     }
   }, {
     freezeTableName: true,
