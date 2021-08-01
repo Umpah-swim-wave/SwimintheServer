@@ -4,11 +4,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(30),
       allowNull: false
     },
-    explanation: {
-      type: DataTypes.TEXT,
+    level: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    purpose: {
+    wholeTime: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    explanation: {
       type: DataTypes.TEXT,
       allowNull: false
     },
@@ -27,10 +31,6 @@ module.exports = (sequelize, DataTypes) => {
     time: {
       type: DataTypes.DOUBLE,
       allowNull: false
-    },
-    remark: {
-      type: DataTypes.TEXT,
-      allowNull: true
     }
   }, {
     freezeTableName: true,
