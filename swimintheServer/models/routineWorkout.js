@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define('ROUTINE', {
+  return sequelize.define('RoutineWorkout', {
     title: {
       type: DataTypes.STRING(30),
       allowNull: false
@@ -8,31 +8,20 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    wholeDistance: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     wholeTime: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    explanation: {
+    description: {
       type: DataTypes.TEXT,
-      allowNull: false
-    },
-    set: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    stroke: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-    distance: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    time: {
-      type: DataTypes.DOUBLE,
       allowNull: false
     }
   }, {
+    tableName: 'routine_workout',
     freezeTableName: true,
     timestamps: false,
   })
